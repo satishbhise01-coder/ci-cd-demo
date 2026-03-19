@@ -8,12 +8,6 @@ pipeline {
 
     stages {
 
-        stage('Checkout Code') {
-            steps {
-                git 'https://github.com/satishbhise01-coder/ci-cd-demo.git'
-            }
-        }
-
         stage('Build Docker Image') {
             steps {
                 sh 'docker build -t $IMAGE_NAME .'
